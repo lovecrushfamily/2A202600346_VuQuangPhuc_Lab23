@@ -1,0 +1,5 @@
+# 04 — Reflection
+
+Metric tôi muốn sửa mạnh nhất là chỉ số kiểu `prompt count` hoặc `số lần export`, vì hai chỉ số này rất dễ làm nhóm tưởng product đang được adoption tốt trong khi người dùng chỉ đang thử cho biết. Khi nhìn repo `A20-App-116`, tôi thấy sản phẩm có nhiều chỗ dễ đo usage như chat session, dashboard view và export PDF. Nhưng nếu một career advisor vẫn phải sửa gần hết câu trả lời, hoặc export report xong vẫn quay về tổng hợp tay, thì usage đó không tạo ra ROI thật.
+
+Vì vậy tôi đổi trọng tâm sang metric khó hơn nhưng thật hơn: `% output AI được dùng trong tư vấn/report mà không cần sửa fact lớn`. Tôi thích metric này vì nó buộc nhóm phải đo cùng lúc chất lượng, niềm tin và giá trị trong workflow thật. Nó cũng ép team product instrument các điểm còn yếu như citation validation, correction logging và QA sampling. Nếu có thêm thời gian, tôi sẽ tách metric này theo từng workflow và từng nhóm người dùng để biết chỗ nào AI đang hữu ích thật, chỗ nào chỉ đang tạo cảm giác nhanh hơn.
