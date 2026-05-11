@@ -55,6 +55,8 @@ Không chọn quá rộng:
 - Không chọn: "dùng ChatGPT nói chung".
 - Nên chọn: "AI chatbot cho chăm sóc khách hàng SME" hoặc "AI learning assistant cho sinh viên đọc tài liệu".
 
+Trong [`Day23-Lab-Assignment.md`](Day23-Lab-Assignment.md) có một ví dụ mẫu dựa trên case Klarna để minh họa workflow, metric, dashboard mock và decision memo.
+
 ### Part A — Adoption Context
 
 Cần trả lời:

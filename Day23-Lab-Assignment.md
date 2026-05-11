@@ -68,6 +68,14 @@ Template: [`02-templates/00-case-evidence-matrix.md`](02-templates/00-case-evide
 
 Nhóm chọn **1 sản phẩm AI cụ thể** và **2-4 workflow chính**. Không chọn quá rộng kiểu "AI trong công ty" hoặc "dùng ChatGPT nói chung".
 
+Trong bài này, **workflow** là một quy trình có điểm bắt đầu, người dùng rõ ràng, bước AI can thiệp, điểm con người kiểm tra và kết quả cuối có thể đo được.
+
+| Scope còn mơ hồ | Workflow đo được |
+|---|---|
+| Dùng AI chăm sóc khách hàng | Phân loại ticket mới, gợi ý câu trả lời, agent kiểm tra rồi gửi, theo dõi khách có quay lại hỏi tiếp không |
+| Dùng AI học tập | Upload tài liệu, tóm tắt nội dung, tạo quiz, gợi ý phần cần học lại |
+| Dùng AI lập trình | Gợi ý code, tạo test, review PR, cập nhật tài liệu kỹ thuật |
+
 Ví dụ scope tốt:
 
 | Product | 2-4 workflow chính |
@@ -123,6 +131,54 @@ Trả lời ngắn 4 câu:
 4. Trước khi scale, nhóm phải làm gì?
 
 Template: [`02-templates/04-part-d-decision-memo.md`](02-templates/04-part-d-decision-memo.md)
+
+### Ví dụ mẫu — Klarna customer support AI
+
+Dùng ví dụ này để hiểu deliverable cần trông như thế nào. Không copy nguyên số liệu nếu nhóm chọn product khác.
+
+Case thật: [OpenAI công bố case Klarna](https://openai.com/index/klarna/) với các tín hiệu vận hành rất mạnh: AI assistant xử lý khoảng 2,3 triệu cuộc trò chuyện, khoảng hai phần ba tổng số chat, thời gian xử lý giảm từ 11 phút xuống dưới 2 phút, và được mô tả là tương đương khoảng 700 nhân sự toàn thời gian. Đến năm 2025, [Reuters đưa tin Klarna điều chỉnh trọng tâm](https://www.reuters.com/business/swedens-klarna-shifts-ai-focus-cost-cuts-growth-2025-09-10/), bổ sung lại yếu tố con người trong dịch vụ khách hàng.
+
+Bài học cho dashboard: không dừng ở "AI xử lý nhiều chat". Volume và tốc độ là tín hiệu tốt, nhưng chưa đủ để chứng minh chất lượng, niềm tin và giá trị bền vững.
+
+**Part A mẫu**
+
+| Trường | Ví dụ điền |
+|---|---|
+| Product | AI customer support assistant |
+| Người dùng chính | Khách hàng cần hỗ trợ + support agent |
+| 2-4 workflow chính | Phân loại chat mới; trả lời case đơn giản; chuyển case phức tạp cho người thật; theo dõi khách quay lại hỏi tiếp |
+| AI làm gì? | Nhận diện intent, trả lời câu hỏi thường gặp, gợi ý bước xử lý, tóm tắt case trước khi escalated |
+| Con người kiểm tra ở đâu? | Case phức tạp, khiếu nại, hoàn tiền, tranh chấp, khách không hài lòng |
+| Khi AI sai thì xử lý thế nào? | Escalate sang agent, ghi lý do lỗi, đưa vào QA sample, cập nhật rule hoặc prompt |
+| Rào cản ADKAR chính | Ability + Reinforcement: agent cần biết khi nào tin AI, khi nào phải override |
+| 3 tactic | Human-in-loop checklist; QA sample hằng tuần; dashboard cảnh báo khi repeat inquiry hoặc complaint tăng |
+
+**Part B mẫu**
+
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
+|---|---|---:|---:|---|---|---|---|
+| Product / Activation | % eligible chats AI xử lý hoặc hỗ trợ | Case công bố: khoảng 2/3 chat | Duy trì ở nhóm case rủi ro thấp | Chat routing log | CX Ops Lead | Coverage cao có thể che case phức tạp bị xử lý kém | Tách metric theo độ phức tạp của case |
+| Workflow / Productivity | Median resolution time | Case công bố: 11 phút | Dưới 2 phút nhưng quality không giảm | Ticket system | Support Ops Lead | Nhanh hơn nhưng có thể trả lời sai | Ghép với QA pass rate và repeat inquiry |
+| Workflow / Quality | Repeat inquiry rate sau câu trả lời AI | Chưa đủ rõ trong public case | Không cao hơn human baseline | Ticket system | CX QA Lead | Không đo chỉ số này thì không biết khách có phải hỏi lại không | Theo dõi repeat trong 7 ngày sau ticket |
+| Workflow / Trust | CSAT theo độ phức tạp của case | Chưa đủ rõ trong public case | Mỗi tier đạt hoặc vượt human baseline | Post-ticket survey | CX Lead | Average CSAT che mất nhóm case phức tạp | Tách simple / medium / complex case |
+| Value | Cost per resolved ticket | Company-reported cost efficiency | Giảm chi phí chỉ khi complaint không tăng | Finance + ticket system | Finance BP | Cắt chi phí nhưng làm giảm trải nghiệm | Ghép với complaint rate và escalation success |
+
+**Part C mẫu**
+
+```text
+[Product Coverage]        [Resolution Time]
+2/3 eligible chats         <2 min, only valid if QA stable
+
+[Quality]                 [Trust]
+Repeat inquiry rate        CSAT by case complexity
+
+[Value]                   [Decision]
+Cost per resolved ticket   Continue routine cases, pivot complex cases to human-in-loop
+```
+
+**Part D mẫu**
+
+Khuyến nghị: **continue with guardrails**. Tiếp tục dùng AI cho case đơn giản, nhưng pivot case phức tạp sang human-in-loop cho tới khi CSAT theo độ phức tạp, repeat inquiry và escalation success ổn định. Metric mạnh nhất không phải là "AI xử lý 2/3 chat", mà là tổ hợp: resolution time giảm, quality không giảm, trust không giảm.
 
 ---
 
