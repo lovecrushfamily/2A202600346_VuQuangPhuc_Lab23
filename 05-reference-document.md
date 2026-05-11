@@ -684,8 +684,6 @@ Trả lời ngắn bốn câu:
 | Part C template | [02-templates/03-part-c-dashboard-mock.md](02-templates/03-part-c-dashboard-mock.md) |
 | Part D template | [02-templates/04-part-d-decision-memo.md](02-templates/04-part-d-decision-memo.md) |
 | Red-team template | [02-templates/05-red-team-template.md](02-templates/05-red-team-template.md) |
-| Adoption diagnostic toolkit | [03-tools-guide/adoption-diagnostic-toolkit.md](03-tools-guide/adoption-diagnostic-toolkit.md) |
-| Self-research prompts | [03-tools-guide/prompts-for-self-research.md](03-tools-guide/prompts-for-self-research.md) |
 | Rubric chi tiết | [../../assessment/day23-rubric-requirements.md](../../assessment/day23-rubric-requirements.md) |
 
 ---

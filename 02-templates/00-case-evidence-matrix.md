@@ -1,42 +1,57 @@
-# Mẫu 00 — Bảng So Sánh Case Thành Công / Thất Bại
+# Mẫu 00 — Case Evidence Matrix và Case Comparison
 
-Mục tiêu của bài này: đọc case thật để biết chỉ số nào chứng minh được giá trị (value), chỉ số nào chỉ tạo cảm giác tốt.
+Mục tiêu: đọc case thật để biết metric nào chứng minh được giá trị, metric nào chỉ tạo cảm giác tốt.
 
-## Chọn Case
+---
 
-| Nhóm case | Gợi ý |
+## A. Case Evidence Matrix — cá nhân
+
+Điền cho case bạn được giao.
+
+| Trường | Trả lời |
 |---|---|
-| Thành công / tín hiệu tốt | Morgan Stanley, DWP/GDS, Stripe, Nansen |
-| Thất bại / cảnh báo | Klarna, IBM Watson / MD Anderson, KPMG dashboard, JPMorgan dashboard |
+| Case | |
+| AI được dùng trong workflow nào? | |
+| Người dùng chính là ai? | |
+| Họ đo metric gì? | |
+| Metric đó thuộc layer nào? | Activation / Engagement / Productivity / Quality / Trust / Value |
+| Metric đó chứng minh được gì? | |
+| Metric đó chưa chứng minh được gì? | |
+| Thiếu metric nào? | |
+| Rủi ro lớn nhất | |
+| Bài học cho dashboard nhóm | |
 
-## Bảng Điền
+---
 
-| Trường | Case thành công | Case thất bại/cảnh báo |
+## B. Case Comparison — nhóm
+
+Nhóm tổng hợp một case có tín hiệu tốt và một case cảnh báo / thất bại.
+
+| Trường | Case thành công / tín hiệu tốt | Case cảnh báo / thất bại |
 |---|---|---|
 | Case | | |
-| AI được dùng trong quy trình nào? | | |
-| Người dùng chính là ai? | | |
-| Họ đo chỉ số gì? | | |
-| Chỉ số đó thuộc lớp nào? | Activation / Engagement / Productivity / Quality / Trust / Value | Activation / Engagement / Productivity / Quality / Trust / Value |
-| Chỉ số đó chứng minh được gì? | | |
-| Chỉ số đó chưa chứng minh được gì? | | |
-| Thiếu chỉ số nào? | | |
-| Rủi ro lớn nhất | | |
+| Workflow có AI | | |
+| Metric chính | | |
+| Metric đó chứng minh được gì? | | |
+| Metric đó chưa chứng minh được gì? | | |
+| Thiếu metric nào? | | |
 | Bài học cho dashboard nhóm | | |
 
-## Câu Chốt Của Nhóm
+---
+
+## Câu chốt
 
 ```markdown
 Case thành công dạy nhóm tôi rằng:
 
-Case thất bại/cảnh báo dạy nhóm tôi rằng:
+Case cảnh báo / thất bại dạy nhóm tôi rằng:
 
-Vì vậy dashboard nhóm tôi phải tránh:
+Vì vậy dashboard nhóm tôi phải:
 ```
 
 ## Tự kiểm tra
 
 - [ ] Không chỉ kể chuyện case.
-- [ ] Có nêu chỉ số cụ thể.
-- [ ] Có nói chỉ số chứng minh được gì và không chứng minh được gì.
+- [ ] Có nêu metric cụ thể.
+- [ ] Có nói metric chứng minh được gì và chưa chứng minh được gì.
 - [ ] Có ít nhất 1 bài học áp dụng vào dashboard nhóm.

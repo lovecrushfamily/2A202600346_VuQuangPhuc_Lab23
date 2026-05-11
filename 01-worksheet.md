@@ -1,67 +1,37 @@
-# Day 23 — Phiếu Làm Bài Dashboard Hành Động Cho Áp Dụng AI
+# Day 23 — Worksheet Product ROI Dashboard
 
-> File nhóm điền trong lớp và nộp cuối ngày. Làm theo thứ tự: thách thức cá nhân -> case thành công/thất bại -> chẩn đoán -> giải pháp -> dashboard -> phản biện -> sửa v2.
+File này dùng để nhóm điền trong lớp, sau đó copy nội dung cuối vào `03-product-roi-dashboard.md` trong repo cá nhân của từng thành viên.
 
 ---
 
-## 0. Thông Tin Nhóm
+## 0. Thông tin nhóm
 
 | Trường | Trả lời |
 |---|---|
 | Nhóm | |
 | Thành viên + phần phụ trách | |
-| Sản phẩm / công cụ AI chọn phân tích | |
+| Product chọn phân tích | |
 | Người dùng chính | |
-| Link / file nộp cuối | |
+| Link repo / file nộp cuối | |
 
 ---
 
-## 1. Ghi Chú Thách Thức Áp Dụng AI Cá Nhân
+## 1. Case Comparison
 
-Mỗi người viết 1-2 tình huống trong 10 phút đầu, không dùng AI.
+Tóm tắt bài học từ case study để dùng cho dashboard.
 
-| Thành viên | Tình huống AI bị kẹt | Dấu hiệu bị kẹt | Giả thuyết ban đầu |
-|---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-
-### Nhóm gom lại thành 3-5 pattern
-
-| Pattern | Tình huống liên quan | Vì sao đáng chọn cho lab? |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
-
-**Thách thức nhóm chọn để làm lab:**  
-
-```markdown
-...
-```
-
----
-
-## 2. Bảng So Sánh Case Thành Công / Thất Bại
-
-Mỗi nhóm phân tích 1 case thành công và 1 case thất bại/cảnh báo. Dùng `04-reference/case-clinic-summary.md` nếu cần.
-
-| Trường | Case thành công | Case thất bại/cảnh báo |
+| Trường | Case thành công / tín hiệu tốt | Case cảnh báo / thất bại |
 |---|---|---|
 | Case | | |
-| AI được dùng trong quy trình nào? | | |
-| Họ đo chỉ số gì? | | |
-| Chỉ số đó chứng minh được gì? | | |
-| Chỉ số đó chưa chứng minh được gì? | | |
-| Thiếu chỉ số nào? | | |
+| AI được dùng trong workflow nào? | | |
+| Người dùng chính là ai? | | |
+| Họ đo metric gì? | | |
+| Metric đó chứng minh được gì? | | |
+| Metric đó chưa chứng minh được gì? | | |
+| Thiếu metric nào? | | |
 | Bài học cho dashboard nhóm | | |
 
-**1 bài học nhóm sẽ áp dụng ngay:**  
+**Bài học nhóm sẽ áp dụng vào dashboard:**
 
 ```markdown
 ...
@@ -69,59 +39,28 @@ Mỗi nhóm phân tích 1 case thành công và 1 case thất bại/cảnh báo.
 
 ---
 
-## 3. Phần A — Thách Thức Và Phạm Vi Sản Phẩm
+## 2. Part A — Adoption Context
 
 | Trường | Trả lời |
 |---|---|
-| Thách thức áp dụng AI | |
-| Sản phẩm / công cụ AI | |
+| Product | |
 | Người dùng chính | |
 | Bối cảnh sử dụng | |
 | Mục tiêu kinh doanh / học tập / vận hành | |
+| Rào cản ADKAR chính | Awareness / Desire / Knowledge / Ability / Reinforcement |
 
-### 2-4 quy trình chính
+### 2-4 workflow chính
 
-| # | Tên quy trình | Vai trò AI | Điểm người kiểm tra | Khi AI sai thì xử lý thế nào? |
+| # | Workflow | AI làm gì? | Con người kiểm tra ở đâu? | Khi AI sai thì xử lý thế nào? |
 |---|---|---|---|---|
 | 1 | | | | |
 | 2 | | | | |
 | 3 | | | | |
 | 4 | | | | |
 
----
+### 3 tactic tăng adoption
 
-## 4. Phần B — Chẩn Đoán Nguyên Nhân Gốc
-
-Dùng 2-3 lăng kính. Không cần dùng tất cả.
-
-| Lăng kính | Câu hỏi | Chẩn đoán của nhóm | Evidence / quan sát |
-|---|---|---|---|
-| Quy trình công việc | Công việc thật có đổi không, hay chỉ thêm AI ở ngoài? | | |
-| ADKAR | Người dùng kẹt ở Awareness / Desire / Knowledge / Ability / Reinforcement? | | |
-| Mức sẵn sàng | Dữ liệu, quyền truy cập, người phụ trách, governance, budget đã sẵn sàng chưa? | | |
-| Chỉ số | Team đang đo usage hay đo value thật? | | |
-| Niềm tin / chất lượng | Người dùng có tin output không? Khi AI sai thì xử lý thế nào? | | |
-
-### Nguyên nhân gốc nhóm chọn
-
-| # | Nguyên nhân gốc | Vì sao đây là nguyên nhân chính? | Case nào hỗ trợ cách nhìn này? |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-
----
-
-## 5. Phần C — Giải Pháp Và Lộ Trình 30/60/90 Ngày
-
-| Mốc | Việc cần làm | Người phụ trách | Dấu hiệu hoàn thành | Rủi ro còn lại |
-|---|---|---|---|---|
-| 0-30 ngày | | | | |
-| 31-60 ngày | | | | |
-| 61-90 ngày | | | | |
-
-### 3 tactic áp dụng
-
-| Tactic | Nhắm vào barrier nào? | Áp dụng cho quy trình nào? | Người phụ trách |
+| Tactic | Nhắm vào rào cản nào? | Áp dụng cho workflow nào? | Người phụ trách |
 |---|---|---|---|
 | 1 | | | |
 | 2 | | | |
@@ -129,34 +68,23 @@ Dùng 2-3 lăng kính. Không cần dùng tất cả.
 
 ---
 
-## 6. Phần D — Dashboard Đo ROI Của Sản Phẩm
+## 3. Part B — ROI Dashboard
 
-### D.1 Chỉ số toàn sản phẩm
+### B.1 Metric toàn product
 
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách | Rủi ro từ phản biện | Sửa ở v2 |
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
 |---|---|---:|---:|---|---|---|---|
 | Activation | | | | | | | |
-| Retention / Value | | | | | | | |
-| Trust hoặc Quality | | | | | | | |
+| Engagement / Retention | | | | | | | |
+| Trust / Quality / Value | | | | | | | |
 
-### D.2 Chỉ số theo từng quy trình
+### B.2 Metric theo workflow
 
-Sao chép block dưới cho mỗi quy trình đã chọn. Mỗi quy trình cần ít nhất 4 lớp đo, ưu tiên Productivity + Quality + Trust + Value.
+Sao chép block dưới cho mỗi workflow đã chọn. Mỗi workflow cần ít nhất 4 layer, ưu tiên Productivity + Quality + Trust hoặc Value.
 
-#### Quy trình 1 — [tên]
+#### Workflow 1 — [tên]
 
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách | Rủi ro từ phản biện | Sửa ở v2 |
-|---|---|---:|---:|---|---|---|---|
-| Activation | | | | | | | |
-| Engagement | | | | | | | |
-| Productivity | | | | | | | |
-| Quality | | | | | | | |
-| Trust | | | | | | | |
-| Value | | | | | | | |
-
-#### Quy trình 2 — [tên]
-
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách | Rủi ro từ phản biện | Sửa ở v2 |
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
 |---|---|---:|---:|---|---|---|---|
 | Activation | | | | | | | |
 | Engagement | | | | | | | |
@@ -165,9 +93,9 @@ Sao chép block dưới cho mỗi quy trình đã chọn. Mỗi quy trình cần
 | Trust | | | | | | | |
 | Value | | | | | | | |
 
-#### Quy trình 3 — [nếu có]
+#### Workflow 2 — [tên]
 
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách | Rủi ro từ phản biện | Sửa ở v2 |
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
 |---|---|---:|---:|---|---|---|---|
 | Activation | | | | | | | |
 | Engagement | | | | | | | |
@@ -176,9 +104,20 @@ Sao chép block dưới cho mỗi quy trình đã chọn. Mỗi quy trình cần
 | Trust | | | | | | | |
 | Value | | | | | | | |
 
-#### Quy trình 4 — [nếu có]
+#### Workflow 3 — [nếu có]
 
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách | Rủi ro từ phản biện | Sửa ở v2 |
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
+|---|---|---:|---:|---|---|---|---|
+| Activation | | | | | | | |
+| Engagement | | | | | | | |
+| Productivity | | | | | | | |
+| Quality | | | | | | | |
+| Trust | | | | | | | |
+| Value | | | | | | | |
+
+#### Workflow 4 — [nếu có]
+
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
 |---|---|---:|---:|---|---|---|---|
 | Activation | | | | | | | |
 | Engagement | | | | | | | |
@@ -189,48 +128,70 @@ Sao chép block dưới cho mỗi quy trình đã chọn. Mỗi quy trình cần
 
 ---
 
-## 7. Phần E — Dashboard Mock
+## 4. Part C — Dashboard Mock
 
-Vẽ 4-6 ô. Ô đầu tiên là tình trạng toàn sản phẩm, các ô sau là tín hiệu theo quy trình hoặc quyết định.
+Vẽ 4-6 ô. Ô đầu tiên là tình trạng toàn product, các ô sau là tín hiệu theo workflow hoặc quyết định.
 
 ```text
-┌────────────────────────────────────┐ ┌────────────────────────────────────┐
-│ TILE 1: PRODUCT HEALTH             │ │ TILE 2: WORKFLOW 1                 │
-│ Number: __________________________ │ │ Number: __________________________ │
-│ Trend: ___________________________ │ │ Trend: ___________________________ │
-│ Status: GREEN / AMBER / RED        │ │ Status: GREEN / AMBER / RED        │
-│ Action: __________________________ │ │ Action: __________________________ │
-└────────────────────────────────────┘ └────────────────────────────────────┘
+┌──────────────────────────────┐ ┌──────────────────────────────┐
+│ PRODUCT HEALTH               │ │ WORKFLOW 1                   │
+│ Metric: ____________________ │ │ Metric: ____________________ │
+│ Current: ____ Target: _____  │ │ Current: ____ Target: _____  │
+│ Status: Green / Amber / Red  │ │ Status: Green / Amber / Red  │
+│ Action if red: _____________ │ │ Action if red: _____________ │
+└──────────────────────────────┘ └──────────────────────────────┘
 
-┌────────────────────────────────────┐ ┌────────────────────────────────────┐
-│ TILE 3: WORKFLOW 2                 │ │ TILE 4: WORKFLOW 3 / TRUST         │
-│ Number: __________________________ │ │ Number: __________________________ │
-│ Trend: ___________________________ │ │ Trend: ___________________________ │
-│ Status: GREEN / AMBER / RED        │ │ Status: GREEN / AMBER / RED        │
-│ Action: __________________________ │ │ Action: __________________________ │
-└────────────────────────────────────┘ └────────────────────────────────────┘
+┌──────────────────────────────┐ ┌──────────────────────────────┐
+│ WORKFLOW 2                   │ │ QUALITY / TRUST              │
+│ Metric: ____________________ │ │ Metric: ____________________ │
+│ Current: ____ Target: _____  │ │ Current: ____ Target: _____  │
+│ Status: Green / Amber / Red  │ │ Status: Green / Amber / Red  │
+│ Action if red: _____________ │ │ Action if red: _____________ │
+└──────────────────────────────┘ └──────────────────────────────┘
 
-┌────────────────────────────────────┐ ┌────────────────────────────────────┐
-│ TILE 5: VALUE / COVERAGE           │ │ TILE 6: DECISION                   │
-│ Number: __________________________ │ │ Continue / Pivot / Kill: _________ │
-│ Trend: ___________________________ │ │ Metric mạnh nhất: ________________ │
-│ Status: GREEN / AMBER / RED        │ │ Action: __________________________ │
-└────────────────────────────────────┘ └────────────────────────────────────┘
+┌──────────────────────────────┐ ┌──────────────────────────────┐
+│ VALUE                         │ │ DECISION                     │
+│ Metric: ____________________ │ │ Continue / Pivot / Kill: ___ │
+│ Current: ____ Target: _____  │ │ Metric mạnh nhất: __________ │
+│ Status: Green / Amber / Red  │ │ Before scale: ______________ │
+└──────────────────────────────┘ └──────────────────────────────┘
 ```
 
 ---
 
-## 8. Phần F — Phản Biện Vai Và Sửa V2
+## 5. Part D — Decision Memo
 
-### Nhóm mình đi phản biện nhóm khác
+```markdown
+# Decision Memo — [tên product]
+
+1. Nhóm khuyến nghị: continue / pivot / kill.
+
+2. Metric mạnh nhất để bảo vệ quyết định là:
+
+3. Metric hoặc giả định nhóm đã sửa sau red-team là:
+   V1: ...
+   V2: ...
+   Vì sao sửa này tốt hơn:
+
+4. Trước khi scale, nhóm phải:
+   1.
+   2.
+   3.
+```
+
+---
+
+## 6. Red-team và sửa v2
+
+### Nhóm mình đi red-team nhóm khác
 
 | Vai nhóm được giao | Nhóm bị phản biện | 3 câu hỏi / rủi ro nhóm mình nêu |
 |---|---|---|
-| CFO / Người dùng / Rủi ro / Chủ quy trình | | 1.  2.  3. |
+| CFO / User / Risk / Workflow Owner | | 1.  2.  3. |
 
-### Nhóm mình bị phản biện
+### Nhóm mình bị red-team
 
-| Rủi ro được nêu | Chỉ số / giả định bị chất vấn | Nhóm sửa gì ở v2? |
+| Red-team risk | Metric / giả định bị chất vấn | Nhóm sửa gì ở v2? |
 |---|---|---|
 | 1 | | |
 | 2 | | |
@@ -246,44 +207,16 @@ Vẽ 4-6 ô. Ô đầu tiên là tình trạng toàn sản phẩm, các ô sau l
 
 ---
 
-## 9. Phần G — Memo Quyết Định
+## 7. Checklist trước khi nộp
 
-```markdown
-# Memo Quyết Định Cuối — [tên sản phẩm]
-
-1. Nhóm khuyến nghị: tiếp tục / đổi hướng / dừng.
-
-2. Chỉ số mạnh nhất để bảo vệ quyết định là:
-
-3. Chỉ số hoặc giả định nhóm đã sửa sau phản biện là:
-
-4. Trước khi scale, nhóm phải:
-   1.
-   2.
-   3.
-```
-
----
-
-## 10. Nhật Ký Dùng AI (AI Support Log)
-
-Điền nếu nhóm dùng AI sau phần làm cá nhân ban đầu.
-
-| AI đã giúp gì? | AI trả lời sai / chung chung ở đâu? | Nhóm đã sửa bằng tay như thế nào? |
-|---|---|---|
-| | | |
-
----
-
-## 11. Checklist Trước Khi Nộp
-
-- [ ] Có challenge rõ, không chỉ nói "AI adoption khó".
-- [ ] Có 1 sản phẩm cụ thể, không chọn "AI cho cả công ty".
-- [ ] Có 2-4 quy trình chính.
-- [ ] Có 1-2 nguyên nhân gốc với evidence.
-- [ ] Có lộ trình 30/60/90 ngày, có người phụ trách.
-- [ ] Dashboard có chỉ số toàn sản phẩm và chỉ số theo quy trình.
+- [ ] Có 1 product cụ thể, không chọn "AI cho cả công ty".
+- [ ] Có 2-4 workflow chính.
+- [ ] Mỗi workflow có vai trò AI, human review và failure path.
+- [ ] Có rào cản ADKAR chính.
+- [ ] Dashboard có metric toàn product và metric theo workflow.
 - [ ] Không chỉ đo usage: login, prompt count, DAU/MAU.
-- [ ] Có nguồn dữ liệu và người phụ trách cho các chỉ số chính.
-- [ ] Có rủi ro từ phản biện và ít nhất 2 sửa đổi từ v1 sang v2.
-- [ ] Memo quyết định có tiếp tục / đổi hướng / dừng.
+- [ ] Có baseline, target, data source và owner cho các metric chính.
+- [ ] Có ít nhất 1 metric Quality, Trust hoặc Value.
+- [ ] Có Red-team risk và Fix.
+- [ ] Có ít nhất 2 thay đổi rõ từ v1 sang v2.
+- [ ] Decision Memo có continue / pivot / kill.

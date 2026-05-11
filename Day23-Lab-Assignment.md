@@ -1,337 +1,291 @@
-# Day 23 Lab — Dashboard Hành Động Cho Áp Dụng AI (AI Adoption Action Dashboard)
+# Day 23 Lab — Product ROI Dashboard
 
-**Thời lượng:** 4 giờ trên lớp, 09:00-13:00  
+**Chủ đề:** Đưa AI vào vận hành thực tế  
+**Thời lượng:** 09:00-13:00  
 **Hình thức:** cá nhân + nhóm 4-6 người  
-**Sản phẩm chính cuối ngày:** nhóm nộp một **dashboard hành động cho áp dụng AI** cho một sản phẩm AI cụ thể.
+**Sản phẩm chính:** một **Product ROI Dashboard** cho 1 sản phẩm AI cụ thể.
+
+Mục tiêu của lab không phải là kể rằng "AI hay". Mục tiêu là thiết kế một dashboard giúp nhóm trả lời:
+
+> Sản phẩm AI này có tạo giá trị thật không, hay chỉ có người dùng thử?
 
 ---
 
-## Bạn Cần Làm Gì Hôm Nay
+## 1. Cuối ngày cần nộp gì?
 
-Day 23 không yêu cầu bạn nghe lý thuyết rồi chép lại khung lý thuyết (framework). Bạn sẽ đi theo 5 bước:
+Mỗi học viên tạo **một repo GitHub cá nhân** và để tất cả bài nộp trong repo đó.
 
-1. Tự quan sát một thất bại hoặc thách thức khi đưa AI vào công việc.
-2. Nghiên cứu case thật: một case thành công và một case thất bại hoặc cảnh báo.
-3. Quay lại vấn đề ban đầu, tìm nguyên nhân gốc bằng các lăng kính đã học.
-4. Thiết kế giải pháp, lộ trình triển khai và bảng đo hiệu quả (dashboard).
-5. Bị nhóm khác chất vấn, sau đó sửa bản cuối và nộp.
+| File | Ai làm? | Deadline | Nội dung |
+|---|---|---|---|
+| `01-case-evidence-matrix.md` | Cá nhân | Trong Block 2 | Phân tích case được giao: metric chứng minh được gì, chưa chứng minh được gì |
+| `02-case-comparison.md` | Nhóm, mỗi thành viên copy về repo cá nhân | Cuối Block 2 | So sánh case thành công / cảnh báo và rút bài học cho dashboard |
+| `03-product-roi-dashboard.md` | Nhóm, mỗi thành viên copy về repo cá nhân | 13:00 | Dashboard Parts A-D sau khi red-team và sửa |
+| `04-reflection.md` | Cá nhân | 24h sau lớp | 150-200 từ: 1 metric hoặc 1 giả định bạn sẽ sửa |
 
----
-
-## Cuối Ngày Cần Nộp Gì
-
-**Mỗi học viên tạo MỘT GitHub repo cá nhân duy nhất:** `Day23-Track01-<MãHọcViên>` (public). Để TẤT CẢ deliverables vào repo này.
-
-| # | Bài nộp | Ai nộp | Khi nào | File trong repo cá nhân |
-|---|---|---|---|---|
-| 1 | **Ghi chú thách thức áp dụng AI** + Case Evidence Matrix | Cá nhân | 09:25 | `01-case-evidence-matrix.md` |
-| 2 | **Bảng so sánh case thành công/thất bại** | Nhóm (mỗi thành viên copy vào repo) | 10:40 | `02-case-comparison.md` |
-| 3 | **Dashboard hành động v2** (Product ROI Dashboard Parts A-D) | Nhóm (mỗi thành viên copy vào repo) | 13:00 | `03-product-roi-dashboard.md` |
-| 4 | **Reflect cá nhân:** "1 chỉ số hoặc 1 giả định tôi sẽ sửa" | Cá nhân | Trong 24h sau lớp | `04-reflection.md` |
-
-**Workflow:**
-
-1. **Trước 09:00** — Tạo repo `Day23-Track01-<MãHọcViên>` (public), commit `README.md` ghi rõ họ tên + mã học viên + tên nhóm + thành viên.
-2. **Sau mỗi bài** — commit file mới + `git push` vào branch `main`.
-3. **Cuối Block 5 (13:00)** — share link repo cá nhân lên Discord `#day23-submissions` (1 link / 1 học viên). Repo phải public.
-4. **24h sau lớp** — add `04-reflection.md` + push.
-
-File nhóm nên viết bằng Markdown. Có thể dùng `01-worksheet.md` làm khung chính. Group artifacts (Bài 2 + Bài 3): mỗi thành viên copy file group vào repo cá nhân — đảm bảo mỗi học viên có bundle đầy đủ để chấm. Repo phải stay public ít nhất 2 tuần sau lớp.
+Cuối Block 5, mỗi học viên gửi link repo cá nhân lên Discord `#day23-submissions`.
 
 ---
 
-## Lịch Làm Bài 09:00-13:00
+## 2. Lịch làm bài
 
-| Giờ | Hoạt động | Kết quả |
+| Thời gian | Hoạt động | Kết quả |
 |---|---|---|
-| **09:00-09:05** | Mở bài: Vì sao AI tốt nhưng không được áp dụng thật? | Câu hỏi chung của ngày |
-| **09:05-09:15** | **Bài 1A — Quét thách thức cá nhân** (Personal Fail Scan). Ngồi cá nhân, không dùng AI. Viết 1-2 tình huống áp dụng AI bị kẹt từ bản thân, trường học, team, công ty, hoặc môi trường xung quanh. | Ghi chú cá nhân |
-| **09:15-09:25** | **Bài 1B — Chia sẻ trong nhóm.** Mỗi người chia sẻ nhanh. Nhóm gom các thách thức giống nhau thành 3-5 pattern. | Danh sách thách thức của nhóm |
-| **09:25-09:35** | Giảng viên tổng hợp nhanh lên các lăng kính (lens): quy trình công việc (workflow), ADKAR, mức sẵn sàng (readiness), chỉ số (metrics), niềm tin/chất lượng (trust/quality). | Bản đồ lăng kính |
-| **09:35-10:20** | **Bài 2 — Nghiên cứu case thành công/thất bại.** Mỗi nhóm chọn hoặc được giao 1 case thành công + 1 case thất bại/cảnh báo. Điền bảng case. | Bảng so sánh case |
-| **10:20-10:40** | Một số nhóm trình bày case. Giảng viên chốt: case thành công đo đúng cái gì, case thất bại thiếu hoặc đo sai cái gì. | Bài học từ case |
-| **10:40-11:40** | **Bài 3 — Xây bản v1.** Chọn 1 thách thức từ Bài 1, áp vào 1 sản phẩm AI cụ thể. Tìm nguyên nhân gốc, đề xuất giải pháp, lộ trình và dashboard đo ROI của sản phẩm (Product ROI Dashboard) bản v1. | Dashboard v1 |
-| **11:40-12:10** | **Bài 4 — Phản biện vai** (red-team). Nhóm khác chất vấn bằng 4 vai: CFO / người dùng / rủi ro / chủ quy trình. Ghi rủi ro vào dashboard. | Danh sách rủi ro |
-| **12:10-12:40** | **Bài 5 — Sửa bản v2.** Sửa ít nhất 2 điểm sau phản biện. Hoàn thiện memo quyết định (decision memo). | Dashboard v2 |
-| **12:40-12:55** | 2-3 nhóm trình bày bản v2. Giảng viên tổng hợp pattern chung. | Tổng hợp lớp |
-| **12:55-13:00** | Mỗi thành viên copy file dashboard group vào repo cá nhân `Day23-Track01-<MãHọcViên>` → commit + push → share link repo lên Discord `#day23-submissions`. | Repo cá nhân public với đầy đủ files |
+| 09:00-10:00 | Lecture: AI adoption, ADKAR, Metrics Ladder, Measurement Trap, Gartner Lite, 25 tactics | Nắm framework để làm lab |
+| 10:00-11:00 | Case study theo nhóm | Hoàn thành case matrix + case comparison |
+| 11:00-12:00 | Build Product ROI Dashboard v1 | Có bản nháp Parts A-B-C |
+| 12:00-12:30 | Red-team | Nhóm khác phản biện metric, rủi ro và decision logic |
+| 12:30-13:00 | Revise + submit | Hoàn thành dashboard v2, decision memo và nộp repo |
 
 ---
 
-## Bài 1 — Ghi Chú Thách Thức Áp Dụng AI
+## 3. Block 2 — Case Evidence Matrix và Case Comparison
 
-**Làm cá nhân, 10 phút đầu không dùng AI.**
+Mục tiêu của Block 2 là học cách đọc metric từ case thật.
 
-Viết ngắn gọn:
+Mỗi cá nhân điền `01-case-evidence-matrix.md` cho case được giao. Sau đó nhóm tổng hợp thành `02-case-comparison.md`.
 
-| Trường | Gợi ý trả lời |
-|---|---|
-| Tình huống | AI được thử trong việc gì? |
-| Ai là người dùng chính? | Sinh viên, nhân viên, team vận hành, khách hàng, giáo viên, manager... |
-| Dấu hiệu bị kẹt | Không ai dùng lại, dùng sai cách, dùng nhưng không tạo giá trị, sợ dùng, không tin kết quả đầu ra, không đo được ROI... |
-| Vì sao bạn nghĩ nó bị kẹt? | Giả thuyết ban đầu, chưa cần đúng tuyệt đối |
+Case gợi ý:
 
-Ví dụ ngắn:
-
-```markdown
-Tình huống: Nhóm dùng ChatGPT để viết first draft nội dung marketing.
-Người dùng: 4 bạn trong team content.
-Dấu hiệu bị kẹt: Tuần đầu dùng nhiều, tuần sau quay lại viết tay vì kết quả quá chung.
-Giả thuyết: Chưa có bước review, chưa có guideline thương hiệu, chỉ số chỉ đo "có dùng AI" chứ không đo chất lượng.
-```
-
----
-
-## Bài 2 — Nghiên Cứu Case Thành Công/Thất Bại
-
-Mỗi nhóm phân tích **1 case thành công** và **1 case thất bại/cảnh báo**.
-
-Bạn có thể dùng các case trong `04-reference/case-clinic-summary.md`:
-
-| Nhóm case | Gợi ý |
+| Nhóm case | Ví dụ |
 |---|---|
 | Thành công / tín hiệu tốt | Morgan Stanley, DWP/GDS, Stripe, Nansen |
-| Thất bại / cảnh báo | Klarna, IBM Watson / MD Anderson, KPMG dashboard, JPMorgan dashboard |
+| Cảnh báo / thất bại | Klarna, IBM Watson / MD Anderson, KPMG dashboard, JPMorgan dashboard |
 
-Điền bảng sau:
+Khi phân tích case, không chỉ kể chuyện. Hãy trả lời:
 
-| Trường | Case thành công | Case thất bại/cảnh báo |
-|---|---|---|
-| Case | | |
-| AI được dùng trong quy trình (workflow) nào? | | |
-| Họ đo chỉ số (metric) gì? | | |
-| Chỉ số đó chứng minh được gì? | | |
-| Chỉ số đó chưa chứng minh được gì? | | |
-| Thiếu chỉ số nào? | | |
-| Bài học cho dashboard của nhóm | | |
+- AI được dùng trong workflow nào?
+- Họ đo metric gì?
+- Metric đó chứng minh được gì?
+- Metric đó chưa chứng minh được gì?
+- Còn thiếu metric nào?
+- Bài học nào áp dụng được vào dashboard của nhóm?
 
-**Yêu cầu:** không chỉ kể chuyện case. Phải rút ra bài học để dùng cho dashboard của nhóm.
+Template: [`02-templates/00-case-evidence-matrix.md`](02-templates/00-case-evidence-matrix.md)
 
 ---
 
-## Bài 3 — Xây Bản V1: Dashboard Hành Động Cho Áp Dụng AI
+## 4. Block 3-5 — Product ROI Dashboard
 
-Đây là bài lab chính của ngày.
+Nhóm chọn **1 sản phẩm AI cụ thể** và **2-4 workflow chính**. Không chọn quá rộng kiểu "AI trong công ty" hoặc "dùng ChatGPT nói chung".
 
-Nhóm chọn **1 thách thức áp dụng AI** (AI adoption) từ Bài 1, rồi thiết kế bản v1 theo cấu trúc dưới đây.
+Trong bài này, **workflow** là một quy trình có điểm bắt đầu, người dùng rõ ràng, bước AI can thiệp, điểm con người kiểm tra và kết quả cuối có thể đo được.
 
-### Phần A — Thách Thức Và Phạm Vi Sản Phẩm
-
-| Trường | Cần ghi rõ |
+| Scope còn mơ hồ | Workflow đo được |
 |---|---|
-| Thách thức áp dụng AI | Vấn đề cụ thể nhóm chọn từ Bài 1 |
-| Sản phẩm / công cụ AI | Một sản phẩm hoặc công cụ AI cụ thể, không chọn "AI cho cả công ty" |
-| Người dùng chính | Ai dùng, trong bối cảnh nào, tần suất nào |
-| 2-4 quy trình chính (workflow) | Mỗi quy trình có tên, vai trò của AI, điểm người kiểm tra (human review), và cách xử lý khi AI sai |
+| Dùng AI chăm sóc khách hàng | Phân loại ticket mới, gợi ý câu trả lời, agent kiểm tra rồi gửi, theo dõi khách có quay lại hỏi tiếp không |
+| Dùng AI học tập | Upload tài liệu, tóm tắt nội dung, tạo quiz, gợi ý phần cần học lại |
+| Dùng AI lập trình | Gợi ý code, tạo test, review PR, cập nhật tài liệu kỹ thuật |
 
-**Ví dụ sản phẩm + quy trình:**
+Ví dụ scope tốt:
 
-| Sản phẩm | 2-4 quy trình |
+| Product | 2-4 workflow chính |
 |---|---|
-| Công cụ học tập AI | Upload PDF -> tóm tắt; tạo quiz; theo dõi tiến độ |
-| Trợ lý chăm sóc khách hàng AI | Phân loại ticket; viết nháp phản hồi; agent review/send; theo dõi khách quay lại |
-| Trợ lý coding AI | Gợi ý code; tạo test; review PR; cập nhật tài liệu |
+| AI chatbot cho chăm sóc khách hàng SME | Phân loại ticket, viết nháp phản hồi, agent review/send, theo dõi khách quay lại |
+| AI learning assistant cho sinh viên đọc tài liệu | Upload PDF, tóm tắt, tạo quiz, gợi ý phần học tiếp theo |
+| AI coding assistant cho team kỹ thuật | Gợi ý code, tạo test, review PR, cập nhật tài liệu |
 
-### Phần B — Chẩn Đoán Nguyên Nhân Gốc
+### Part A — Adoption Context
 
-Dùng 2-3 lăng kính (lens), không cần dùng tất cả.
+Cần ghi rõ:
 
-| Lăng kính | Câu hỏi chẩn đoán |
+- Product là gì?
+- Ai dùng product này?
+- 2-4 workflow chính là gì?
+- Trong từng workflow, AI làm phần nào?
+- Con người kiểm tra ở đâu?
+- Khi AI sai thì xử lý thế nào?
+- Rào cản ADKAR chính là gì?
+- 3 tactic nào sẽ dùng để tăng adoption?
+
+Template: [`02-templates/01-part-a-adoption-context.md`](02-templates/01-part-a-adoption-context.md)
+
+### Part B — ROI Dashboard
+
+Dashboard dùng 8 cột:
+
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
+|---|---|---:|---:|---|---|---|---|
+
+Yêu cầu:
+
+- Có metric ở cấp product và cấp workflow.
+- Không chỉ đo login, prompt count, DAU/MAU hoặc số người mở tool.
+- Phải có ít nhất một metric về quality, trust hoặc value.
+- Mỗi metric quan trọng cần có baseline, target, data source và owner.
+
+Template: [`02-templates/02-part-b-roi-dashboard.md`](02-templates/02-part-b-roi-dashboard.md)
+
+### Part C — Dashboard Mock
+
+Vẽ nhanh 4-6 ô dashboard. Không cần đẹp, nhưng phải thấy logic đo và hành động khi chỉ số đỏ.
+
+Template: [`02-templates/03-part-c-dashboard-mock.md`](02-templates/03-part-c-dashboard-mock.md)
+
+### Part D — Decision Memo
+
+Trả lời ngắn 4 câu:
+
+1. Nhóm đề xuất continue / pivot / kill?
+2. Metric mạnh nhất là gì, vì sao?
+3. Metric nào đã thay sau red-team?
+4. Trước khi scale, nhóm phải làm gì?
+
+Template: [`02-templates/04-part-d-decision-memo.md`](02-templates/04-part-d-decision-memo.md)
+
+### Ví dụ mẫu — Klarna customer support AI
+
+Dùng ví dụ này để hiểu deliverable cần trông như thế nào. Không copy nguyên số liệu nếu nhóm chọn product khác.
+
+Case thật: [OpenAI công bố case Klarna](https://openai.com/index/klarna/) với các tín hiệu vận hành rất mạnh: AI assistant xử lý khoảng 2,3 triệu cuộc trò chuyện, khoảng hai phần ba tổng số chat, thời gian xử lý giảm từ 11 phút xuống dưới 2 phút, và được mô tả là tương đương khoảng 700 nhân sự toàn thời gian. Đến năm 2025, [Reuters đưa tin Klarna điều chỉnh trọng tâm](https://www.reuters.com/business/swedens-klarna-shifts-ai-focus-cost-cuts-growth-2025-09-10/), bổ sung lại yếu tố con người trong dịch vụ khách hàng.
+
+Bài học cho dashboard: không dừng ở "AI xử lý nhiều chat". Volume và tốc độ là tín hiệu tốt, nhưng chưa đủ để chứng minh chất lượng, niềm tin và giá trị bền vững.
+
+**Part A mẫu**
+
+| Trường | Ví dụ điền |
 |---|---|
-| Quy trình công việc (workflow) | Công việc thật có đổi không, hay chỉ thêm AI ở ngoài? |
-| ADKAR | Người dùng đang kẹt ở Awareness, Desire, Knowledge, Ability hay Reinforcement? |
-| Mức sẵn sàng (readiness) | Dữ liệu, quyền truy cập, governance, người phụ trách, budget đã sẵn sàng chưa? |
-| Chỉ số (metrics) | Team đang đo usage hay đo value thật? |
-| Niềm tin / chất lượng (trust/quality) | Người dùng có tin kết quả đầu ra không? Khi AI sai thì xử lý thế nào? |
+| Product | AI customer support assistant |
+| Người dùng chính | Khách hàng cần hỗ trợ + support agent |
+| 2-4 workflow chính | Phân loại chat mới; trả lời case đơn giản; chuyển case phức tạp cho người thật; theo dõi khách quay lại hỏi tiếp |
+| AI làm gì? | Nhận diện intent, trả lời câu hỏi thường gặp, gợi ý bước xử lý, tóm tắt case trước khi escalated |
+| Con người kiểm tra ở đâu? | Case phức tạp, khiếu nại, hoàn tiền, tranh chấp, khách không hài lòng |
+| Khi AI sai thì xử lý thế nào? | Escalate sang agent, ghi lý do lỗi, đưa vào QA sample, cập nhật rule hoặc prompt |
+| Rào cản ADKAR chính | Ability + Reinforcement: agent cần biết khi nào tin AI, khi nào phải override |
+| 3 tactic | Human-in-loop checklist; QA sample hằng tuần; dashboard cảnh báo khi repeat inquiry hoặc complaint tăng |
 
-Kết quả cần có:
+**Part B mẫu**
 
-- 1-2 nguyên nhân gốc chính.
-- Evidence hoặc quan sát hỗ trợ.
-- 1 case từ Bài 2 giúp nhóm nhìn rõ nguyên nhân gốc.
+| Layer | Metric | Baseline | Target | Data source | Owner | Red-team risk | Fix |
+|---|---|---:|---:|---|---|---|---|
+| Product / Activation | % eligible chats AI xử lý hoặc hỗ trợ | Case công bố: khoảng 2/3 chat | Duy trì ở nhóm case rủi ro thấp | Chat routing log | CX Ops Lead | Coverage cao có thể che case phức tạp bị xử lý kém | Tách metric theo độ phức tạp của case |
+| Workflow / Productivity | Median resolution time | Case công bố: 11 phút | Dưới 2 phút nhưng quality không giảm | Ticket system | Support Ops Lead | Nhanh hơn nhưng có thể trả lời sai | Ghép với QA pass rate và repeat inquiry |
+| Workflow / Quality | Repeat inquiry rate sau câu trả lời AI | Chưa đủ rõ trong public case | Không cao hơn human baseline | Ticket system | CX QA Lead | Không đo chỉ số này thì không biết khách có phải hỏi lại không | Theo dõi repeat trong 7 ngày sau ticket |
+| Workflow / Trust | CSAT theo độ phức tạp của case | Chưa đủ rõ trong public case | Mỗi tier đạt hoặc vượt human baseline | Post-ticket survey | CX Lead | Average CSAT che mất nhóm case phức tạp | Tách simple / medium / complex case |
+| Value | Cost per resolved ticket | Company-reported cost efficiency | Giảm chi phí chỉ khi complaint không tăng | Finance + ticket system | Finance BP | Cắt chi phí nhưng làm giảm trải nghiệm | Ghép với complaint rate và escalation success |
 
-### Phần C — Giải Pháp Và Lộ Trình
+**Part C mẫu**
 
-Đề xuất giải pháp ngắn gọn, có người phụ trách và mốc thời gian.
+```text
+[Product Coverage]        [Resolution Time]
+2/3 eligible chats         <2 min, only valid if QA stable
 
-| Mốc | Cần làm gì? | Người phụ trách | Dấu hiệu hoàn thành |
-|---|---|---|---|
-| 0-30 ngày | | | |
-| 31-60 ngày | | | |
-| 61-90 ngày | | | |
+[Quality]                 [Trust]
+Repeat inquiry rate        CSAT by case complexity
 
-Giải pháp có thể gồm:
+[Value]                   [Decision]
+Cost per resolved ticket   Continue routine cases, pivot complex cases to human-in-loop
+```
 
-- sửa quy trình (workflow);
-- thêm bước người kiểm tra (human review);
-- đào tạo hoặc buddy system;
-- chọn champion;
-- đổi chỉ số;
-- thêm kiểm tra chất lượng (quality check);
-- thêm người phụ trách / nguồn dữ liệu;
-- đổi rollout từ toàn bộ team sang pilot nhỏ.
+**Part D mẫu**
 
-### Phần D — Dashboard Đo ROI Của Sản Phẩm
-
-Dashboard phải đo cả **toàn sản phẩm** (product-level) và **từng quy trình** (workflow-level).
-
-**Toàn sản phẩm: 2-3 chỉ số chung**
-
-| Lớp đo | Chỉ số | Mốc hiện tại | Mục tiêu | Nguồn dữ liệu | Người phụ trách |
-|---|---|---:|---:|---|---|
-| Activation | | | | | |
-| Retention / Value | | | | | |
-| Trust hoặc Quality | | | | | |
-
-**Từng quy trình: mỗi quy trình có ít nhất 4 lớp đo**
-
-| Lớp đo | Gợi ý chỉ số |
-|---|---|
-| Activation | Người dùng hoàn thành task đầu tiên bằng AI chưa? |
-| Engagement | Có quay lại dùng trong workflow này không? |
-| Productivity | Công việc nhanh hơn hoặc nhiều hơn không? |
-| Quality | Output có ít lỗi hơn, ít rework hơn không? |
-| Trust | Người dùng có accept, override hay escalate không? |
-| Value | Có tiết kiệm chi phí, tăng SLA, tăng CSAT, tăng learning outcome không? |
-
-**Rule quan trọng:** không chỉ dùng active users, login, prompt count, DAU/MAU. Các chỉ số đó có thể dùng, nhưng phải đi kèm năng suất (productivity), chất lượng (quality), niềm tin (trust) hoặc giá trị (value).
-
-### Phần E — Memo Quyết Định (Decision Memo)
-
-Trả lời 4 câu:
-
-1. Nhóm khuyến nghị **tiếp tục / đổi hướng / dừng** (continue / pivot / kill) sản phẩm hoặc quy trình này?
-2. Chỉ số mạnh nhất để bảo vệ quyết định là gì?
-3. Giả định hoặc chỉ số nào yếu nhất trong bản v1?
-4. Trước khi scale, nhóm phải làm 2-3 việc gì?
+Khuyến nghị: **continue with guardrails**. Tiếp tục dùng AI cho case đơn giản, nhưng pivot case phức tạp sang human-in-loop cho tới khi CSAT theo độ phức tạp, repeat inquiry và escalation success ổn định. Metric mạnh nhất không phải là "AI xử lý 2/3 chat", mà là tổ hợp: resolution time giảm, quality không giảm, trust không giảm.
 
 ---
 
-## Bài 4 — Phản Biện Vai (Red-Team)
+## 5. Red-team
 
-Phản biện vai (red-team) là vòng chất vấn để giúp nhóm sửa bản v1. Đây không phải phần "bắt lỗi cho vui".
+Red-team là vòng phản biện để giúp nhóm sửa dashboard trước khi nộp.
 
-Mỗi nhóm đi chất vấn nhóm khác bằng một vai:
+Mỗi nhóm phản biện nhóm khác theo một trong bốn vai:
 
 | Vai | Câu hỏi chính |
 |---|---|
-| CFO | Chỉ số này chứng minh tiền, chi phí, ROI hoặc giá trị thật ở đâu? |
-| Người dùng (User) | Chỉ số hoặc giải pháp này có ép người dùng dùng AI sai cách không? Có gây friction không? |
-| Rủi ro (Risk) | AI sai thì ai chịu trách nhiệm? Có kiểm tra chất lượng (quality check), audit trail, escalation không? |
-| Chủ quy trình (Workflow Owner) | Dữ liệu lấy từ đâu? Ai pull report? Ai hành động khi chỉ số đỏ? |
+| CFO | Metric này chứng minh tiền, chi phí, ROI hoặc giá trị thật ở đâu? |
+| User | Dashboard hoặc tactic này có ép người dùng dùng AI sai cách không? |
+| Risk | AI sai thì ai chịu trách nhiệm? Có quality check, audit trail, escalation không? |
+| Workflow Owner | Data lấy từ đâu? Ai pull report? Ai xử lý khi chỉ số đỏ? |
 
-Nhóm bị chất vấn phải ghi lại:
+Sau red-team, nhóm bị phản biện phải ghi:
 
-| Rủi ro được nêu | Chỉ số / giả định bị chất vấn | Nhóm sẽ sửa gì ở v2 |
-|---|---|---|
-| | | |
+- Red-team risk vào dashboard.
+- Fix tương ứng.
+- Ít nhất 2 thay đổi rõ từ v1 sang v2.
 
----
-
-## Bài 5 — Sửa Bản V2 Và Nộp
-
-Sau phản biện, nhóm phải sửa ít nhất **2 điểm cụ thể**.
-
-Các thay đổi hợp lệ:
-
-- thay một vanity metric bằng chỉ số outcome / quality / trust;
-- thêm một chỉ số quality hoặc trust;
-- sửa quy tắc quyết định (decision rule) có threshold rõ hơn;
-- thêm nguồn dữ liệu hoặc người phụ trách cụ thể;
-- thêm cách giảm rủi ro (mitigation);
-- sửa lộ trình (roadmap) cho thực tế hơn;
-- đổi phạm vi triển khai từ scale rộng sang pilot nhỏ hơn.
-
-Trong bài nộp cuối, phải nhìn thấy rõ:
-
-```markdown
-V1 issue: chỉ số "prompt count/user/week" dễ bị spam.
-V2 fix: đổi thành "% ticket completed with AI + no QA rework", data source = ticket log + QA sample.
-```
+Template: [`02-templates/05-red-team-template.md`](02-templates/05-red-team-template.md)
 
 ---
 
-## Cách Tính Điểm
+## 6. Cách tính điểm
+
+Day 23 = **100 điểm**.
 
 | Hạng mục | Điểm |
 |---|---:|
-| Ghi chú thách thức cá nhân | 15 |
-| Nghiên cứu case study thành công/thất bại | 15 |
-| Dashboard hành động nhóm | 60 |
-| Reflect cá nhân sau lớp | 10 |
-| **Tổng** | **100** |
+| Case Evidence Matrix | 15 |
+| Case Comparison | 15 |
+| Product ROI Dashboard v2 | 60 |
+| Reflection cá nhân sau lớp | 10 |
 
-Red-team không có điểm riêng. Phần phản biện được tính vào Dashboard hành động nhóm qua mục rủi ro + phần sửa sau stress-test.
+Dashboard nhóm được chấm theo 6 điều kiện:
 
-### Dashboard nhóm được chấm theo 6 điều kiện đạt
+1. Scope rõ: 1 product cụ thể + 2-4 workflow chính.
+2. Chẩn đoán đúng rào cản adoption.
+3. Tactic gắn với đúng rào cản.
+4. Metric đo được productivity, quality, trust hoặc value; không chỉ đo usage.
+5. Baseline, target, data source và owner rõ.
+6. Có red-team risk, Fix và ít nhất 2 thay đổi từ v1 sang v2.
 
-Mỗi điều kiện 10 điểm.
+Chi tiết rubric: [`../../assessment/day23-rubric-requirements.md`](../../assessment/day23-rubric-requirements.md)
 
-| Điều kiện | Đạt khi... |
+---
+
+## 7. Cách nộp bài
+
+Tạo repo GitHub cá nhân:
+
+| Trường | Yêu cầu |
 |---|---|
-| 1. Scope rõ | Có 1 sản phẩm cụ thể + 2-4 quy trình chính |
-| 2. Nguyên nhân gốc rõ | Chẩn đoán không chung chung, có lăng kính + evidence |
-| 3. Giải pháp + roadmap rõ | Có hướng giải quyết và lộ trình 30/60/90 ngày |
-| 4. Chỉ số tốt | Có chỉ số toàn sản phẩm + từng quy trình, không chỉ chỉ số sử dụng (usage metric) |
-| 5. Dữ liệu thực tế | Mốc hiện tại, mục tiêu, nguồn dữ liệu, người phụ trách rõ |
-| 6. Có sửa sau phản biện | Có ít nhất 2 thay đổi cụ thể từ v1 sang v2 |
+| Tên repo | `Day23-Track01-<MãHọcViên>` |
+| Visibility | Public |
+| Branch | `main` |
+
+Cấu trúc repo:
+
+```text
+Day23-Track01-<MãHọcViên>/
+├── README.md
+├── 01-case-evidence-matrix.md
+├── 02-case-comparison.md
+├── 03-product-roi-dashboard.md
+├── 04-reflection.md
+└── assets/
+```
+
+Lưu ý:
+
+- File nộp dùng Markdown (`.md`).
+- Mỗi thành viên copy file nhóm vào repo cá nhân.
+- Discord chỉ dùng để gửi link repo, không nộp file trực tiếp.
+- Repo phải public để đội chấm có thể truy cập.
 
 ---
 
-## Nộp Bài
+## 8. Tài liệu cần mở
 
-### Bài nhóm cuối ngày
-
-Nộp vào repo cá nhân `Day23-Track01-<MãHọcViên>` (file `03-product-roi-dashboard.md`) trước **13:00**, sau đó share link repo lên Discord `#day23-submissions`. Xem §Cuối Ngày Cần Nộp Gì ở đầu file để biết workflow đầy đủ.
-
-Nội dung tối thiểu:
-
-1. Thách thức + phạm vi sản phẩm.
-2. 2-4 quy trình chính.
-3. Chẩn đoán nguyên nhân gốc.
-4. Giải pháp + lộ trình 30/60/90 ngày.
-5. Dashboard đo ROI của sản phẩm.
-6. Rủi ro từ phản biện + phần sửa.
-7. Memo quyết định.
-
-### Reflect cá nhân
-
-Nộp trong 24h sau lớp, 150-200 từ.
-
-Prompt:
-
-> "1 chỉ số hoặc 1 giả định về áp dụng AI tôi sẽ sửa là gì? Vì sao?"
-
-Cần nêu:
-
-- chỉ số hoặc giả định cụ thể;
-- vì sao nó yếu, dễ sai hoặc dễ bị cheat;
-- bạn sẽ thay bằng gì;
-- liên hệ ít nhất 1 case đã học.
-
----
-
-## Tài Liệu Nên Mở Khi Làm
-
-| File | Dùng khi nào |
+| File | Dùng để làm gì? |
 |---|---|
-| `01-worksheet.md` | Khung điền bài nhóm |
-| `04-reference/case-clinic-summary.md` | Chọn và phân tích case |
-| `04-reference/day23-cheatsheet.md` | Tra nhanh ADKAR, thang chỉ số (metric ladder), quy tắc quyết định |
-| `02-templates/05-red-team-template.md` | Khi đi chất vấn nhóm khác |
+| [`README.md`](README.md) | Tóm tắt nhanh buổi học và checklist nộp bài |
+| [`01-worksheet.md`](01-worksheet.md) | Worksheet tổng hợp để làm dashboard |
+| [`02-templates/00-case-evidence-matrix.md`](02-templates/00-case-evidence-matrix.md) | Template case matrix và case comparison |
+| [`02-templates/01-part-a-adoption-context.md`](02-templates/01-part-a-adoption-context.md) | Template Part A |
+| [`02-templates/02-part-b-roi-dashboard.md`](02-templates/02-part-b-roi-dashboard.md) | Template Part B |
+| [`02-templates/03-part-c-dashboard-mock.md`](02-templates/03-part-c-dashboard-mock.md) | Template Part C |
+| [`02-templates/04-part-d-decision-memo.md`](02-templates/04-part-d-decision-memo.md) | Template Part D |
+| [`02-templates/05-red-team-template.md`](02-templates/05-red-team-template.md) | Template red-team |
+| [`05-reference-document.md`](05-reference-document.md) | Tài liệu tham khảo đầy đủ |
 
 ---
 
-## Lỗi Thường Gặp
+## 9. Lỗi thường gặp
 
 - Chọn scope quá rộng: "AI cho cả công ty".
-- Chỉ chọn 1 quy trình nên chỉ số quá chung.
 - Chỉ đo usage: login, prompt count, DAU/MAU.
-- Không có nguồn dữ liệu hoặc người phụ trách.
-- Lộ trình chỉ ghi "train users" nhưng không có người phụ trách, mốc thời gian, dấu hiệu hoàn thành.
-- Phản biện xong nhưng bản v2 không thay đổi gì.
-- Memo quyết định không có tiếp tục / đổi hướng / dừng (continue / pivot / kill).
+- Không có baseline hoặc target.
+- Data source ghi quá chung chung.
+- Owner ghi là "team" thay vì một role cụ thể.
+- Productivity tăng nhưng không có quality hoặc trust đi kèm.
+- Sau red-team nhưng dashboard v2 không sửa gì rõ ràng.
 
 ---
 
-**Điểm cần nhớ:** áp dụng AI (AI adoption) không phải là có người mở tool. AI được adopt thật khi quy trình đổi, người dùng tin được, giá trị đo được, và team biết lúc nào nên tiếp tục, đổi hướng hoặc dừng.
+*Ngày 23 — VinUni A20 — AI Thực Chiến*
